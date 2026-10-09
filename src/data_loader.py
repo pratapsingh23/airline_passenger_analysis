@@ -1,3 +1,5 @@
+
+import os
 import pandas as pd
 
 '---------------------------------------------------'
@@ -5,11 +7,13 @@ import pandas as pd
 '---------------------------------------------------'
 
 # Path of Dataset:
-dataset_path = '/content/drive/MyDrive/data.csv'
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+dataset_path = os.path.join(BASE_DIR, 'data', 'data.csv')
 
 '---------------------------------------------------'
 # Function for loading dataset:
-def get_dataset(path: str) -> pd.DataFrame | None:
+def get_dataset(path: str = dataset_path) -> pd.DataFrame | None:
   """
   Returns the Dataframe or None from path.
   """
@@ -30,4 +34,3 @@ if __name__ == '__main__':
     raise ValueError('Dataset not loaded!')
   else:
     print("Dataset loaded.")
-
