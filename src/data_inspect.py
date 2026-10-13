@@ -4,7 +4,7 @@ from IPython.display import display
 "--------------------------------------------------------"
 # Data Inspecting:
 "--------------------------------------------------------"
-def get_summary(df: pd.DataFrame)-> None:
+def get_inspect(df: pd.DataFrame)-> None:
 
   """
   Display a clean and readable data from dataframe.
